@@ -1,53 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.4 on linux)" generated="2024-04-17T20:25:49.169450" rpa="false" schemaversion="5">
-<suite id="s1" name="Speedtest" source="/home/mayurbaviskar/Study/RobotFramework_usingPython/speedtest.robot">
-<test id="s1-t1" name="Example to test speed in selenium script" line="19">
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>5seconds</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-04-17T20:25:49.287255" elapsed="0.000251"/>
-</kw>
+<robot generator="Robot 7.0 (Python 3.11.4 on linux)" generated="2024-04-17T21:37:11.394331" rpa="false" schemaversion="5">
+<suite id="s1" name="multipleBrowser" source="/home/mayurbaviskar/Study/RobotFramework_usingPython/multipleBrowser.robot">
+<test id="s1-t1" name="Example to open multiple Windoes" line="14">
+<kw name="openurl">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-17T20:25:49.287935" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2024-04-17T21:37:11.512359" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/webhp?authuser=3'.</msg>
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-17T20:25:49.287708" elapsed="14.817094"/>
+<status status="PASS" start="2024-04-17T21:37:11.512109" elapsed="4.730025"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-17T20:26:04.107626" level="INFO">Typing text 'mayur' into text field 'xpath=//input[@id='name']'.</msg>
-<arg>xpath=//input[@id='name']</arg>
-<arg>mayur</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-17T20:26:04.106068" elapsed="15.283279"/>
+<status status="PASS" start="2024-04-17T21:37:11.511431" elapsed="4.730852"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-17T20:26:19.391235" level="INFO">Typing text 'mayur123456@gmail.com' into text field '//input[@id='email']'.</msg>
-<arg>//input[@id='email']</arg>
-<arg>mayur123456@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-17T20:26:19.390369" elapsed="15.283605"/>
+<kw name="openurl2">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-17T21:37:16.243178" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/webhp?authuser=3'.</msg>
+<arg>${URL1}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-17T21:37:16.242907" elapsed="8.854510"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<arg>xpath://*[@id="post-body-1307673142697428135"]/div[1]/label[1]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-17T20:26:34.675241" elapsed="10.094165"/>
+<status status="PASS" start="2024-04-17T21:37:16.242524" elapsed="8.855193"/>
 </kw>
-<doc>test case is use to check speed of execution in selenium script</doc>
-<tag>Test_002</tag>
-<status status="PASS" start="2024-04-17T20:25:49.286397" elapsed="55.484192"/>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-17T21:37:25.098055" elapsed="0.526269"/>
+</kw>
+<doc>check multiple Windows</doc>
+<tag>Test_001</tag>
+<status status="PASS" start="2024-04-17T21:37:11.510935" elapsed="14.114935"/>
 </test>
-<status status="PASS" start="2024-04-17T20:25:49.170314" elapsed="55.602153"/>
+<status status="PASS" start="2024-04-17T21:37:11.395248" elapsed="14.231977"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Test_002</stat>
+<stat pass="1" fail="0" skip="0">Test_001</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Speedtest">Speedtest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="multipleBrowser">multipleBrowser</stat>
 </suite>
 </statistics>
 <errors>

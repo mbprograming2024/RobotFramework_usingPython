@@ -1,77 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.4 on linux)" generated="2024-04-21T01:38:10.518483" rpa="false" schemaversion="5">
-<suite id="s1" name="Userkeywords" source="/home/mayurbaviskar/Study/RobotFramework_usingPython/userkeywords.robot">
-<test id="s1-t1" name="Example to usrdefine Keywords" line="15">
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>30seconds</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-04-21T01:38:10.642096" elapsed="0.000231"/>
+<robot generator="Robot 7.0 (Python 3.11.4 on linux)" generated="2024-04-21T10:17:45.985364" rpa="false" schemaversion="5">
+<suite id="s1" name="Forloop" source="/home/mayurbaviskar/Study/RobotFramework_usingPython/forloop.robot">
+<test id="s1-t1" name="Forloop4" line="30">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-04-21T10:17:46.005390" level="INFO">@{LIST} = [ mayur | pralhad | baviskar | shital | rushi | aasha ]</msg>
+<var>@{LIST}</var>
+<arg>mayur</arg>
+<arg>pralhad</arg>
+<arg>baviskar</arg>
+<arg>shital</arg>
+<arg>rushi</arg>
+<arg>aasha</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-04-21T10:17:46.005157" elapsed="0.000266"/>
 </kw>
-<kw name="launchBrowser" owner="Resource">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-21T01:38:10.643276" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-21T01:38:10.643076" elapsed="91.868929"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-21T01:39:42.512313" elapsed="0.104376"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2024-04-21T01:39:42.626766" level="INFO">${title} = OrangeHRM</msg>
-<var>${title}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2024-04-21T01:39:42.617002" elapsed="0.009982"/>
-</kw>
-<return>
-<value>${title}</value>
-<status status="PASS" start="2024-04-21T01:39:42.627146" elapsed="0.000190"/>
-</return>
-<msg time="2024-04-21T01:39:42.627762" level="INFO">${title1} = OrangeHRM</msg>
-<var>${title1}</var>
-<arg>${url}</arg>
-<arg>${Browser}</arg>
-<status status="PASS" start="2024-04-21T01:38:10.642573" elapsed="91.985264"/>
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-21T10:17:46.005968" level="INFO">${ele} = mayur</msg>
+<var>${ele}</var>
+<arg>${element}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-21T10:17:46.005805" elapsed="0.000185"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${title1}</arg>
+<arg>${ele.upper()}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-04-21T01:39:42.628567" elapsed="0.000583"/>
+<status status="PASS" start="2024-04-21T10:17:46.006090" elapsed="0.000454"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-21T01:39:42.630067" level="INFO">Typing text 'Admin' into text field '//input[@placeholder='Username']'.</msg>
-<arg>//input[@placeholder='Username']</arg>
-<arg>Admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-21T01:39:42.629508" elapsed="2.718357"/>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<msg time="2024-04-21T10:17:46.007569" level="INFO">Exiting for loop altogether.</msg>
+<arg>'${ele.upper()}' == 'MAYUR'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-21T10:17:46.006645" elapsed="0.001017"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-21T01:39:45.348539" level="INFO">Typing text 'admin123' into text field '//input[@placeholder='Password']'.</msg>
-<arg>//input[@placeholder='Password']</arg>
-<arg>admin123</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-21T01:39:45.348222" elapsed="0.097958"/>
-</kw>
-<doc>Example to usrdefine Keywords</doc>
-<tag>001</tag>
-<status status="PASS" start="2024-04-21T01:38:10.641315" elapsed="94.805246"/>
+<var name="${element}">mayur</var>
+<status status="PASS" start="2024-04-21T10:17:46.005716" elapsed="0.002025"/>
+</iter>
+<var>${element}</var>
+<value>@{LIST}</value>
+<status status="PASS" start="2024-04-21T10:17:46.005543" elapsed="0.002253"/>
+</for>
+<status status="PASS" start="2024-04-21T10:17:46.004673" elapsed="0.003352"/>
 </test>
-<status status="PASS" start="2024-04-21T01:38:10.519394" elapsed="94.927865"/>
+<status status="PASS" start="2024-04-21T10:17:45.986255" elapsed="0.022139"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">001</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Userkeywords">Userkeywords</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Forloop">Forloop</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-04-21T01:38:10.640266" level="WARN">Error in file '/home/mayurbaviskar/Study/RobotFramework_usingPython/Resources/Resource.robot' on line 14: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

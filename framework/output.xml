@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on linux)" generated="2024-04-22T11:55:39.084709" rpa="false" schemaversion="5">
+<suite id="s1" name="Loginpage" source="/home/mayurbaviskar/Study/RobotFramework_usingPython/framework/loginpage.robot">
+<test id="s1-t1" name="Test_001" line="13">
+<kw name="LoginTest">
+<kw name="Open MyBrowser" owner="loginkeyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:55:39.678021" level="INFO">Opening browser 'chrome' to base url 'https://practice.expandtesting.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-22T11:55:39.677788" elapsed="58.935473"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-22T11:56:38.613524" elapsed="0.108824"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:55:39.677177" elapsed="59.045715"/>
+</kw>
+<kw name="Enter username" owner="loginkeyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:56:38.726124" level="INFO">Typing text 'practice' into text field '//input[@id='username']'.</msg>
+<arg>//input[@id='username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:56:38.724891" elapsed="0.580684"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-04-22T11:56:38.723575" elapsed="0.582564"/>
+</kw>
+<kw name="Enter Password" owner="loginkeyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:56:39.309983" level="INFO">Typing text 'SuperSecretPassword!' into text field '//input[@id='password']'.</msg>
+<arg>//input[@id='password']</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:56:39.309101" elapsed="0.411547"/>
+</kw>
+<arg>${passed}</arg>
+<status status="PASS" start="2024-04-22T11:56:39.307247" elapsed="0.413914"/>
+</kw>
+<kw name="Click login" owner="loginkeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:56:39.724009" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:56:39.723240" elapsed="1.304267"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:56:39.721936" elapsed="1.306011"/>
+</kw>
+<arg>${username}</arg>
+<arg>${pass}</arg>
+<status status="PASS" start="2024-04-22T11:55:39.676778" elapsed="61.351427"/>
+</kw>
+<kw name="LoginTest">
+<kw name="Open MyBrowser" owner="loginkeyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:56:41.032080" level="INFO">Opening browser 'chrome' to base url 'https://practice.expandtesting.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-22T11:56:41.031256" elapsed="6.612136"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-22T11:56:47.643803" elapsed="0.108025"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:56:41.030200" elapsed="6.722172"/>
+</kw>
+<kw name="Enter username" owner="loginkeyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:56:47.755935" level="INFO">Typing text 'mayur' into text field '//input[@id='username']'.</msg>
+<arg>//input[@id='username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:56:47.754982" elapsed="0.168767"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-04-22T11:56:47.753276" elapsed="0.170596"/>
+</kw>
+<kw name="Enter Password" owner="loginkeyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:56:47.924556" level="INFO">Typing text 'baviskar' into text field '//input[@id='password']'.</msg>
+<arg>//input[@id='password']</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:56:47.924354" elapsed="0.080144"/>
+</kw>
+<arg>${passed}</arg>
+<status status="PASS" start="2024-04-22T11:56:47.924044" elapsed="0.080600"/>
+</kw>
+<kw name="Click login" owner="loginkeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:56:48.005390" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:56:48.005179" elapsed="1.218256"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:56:48.004853" elapsed="1.218829"/>
+</kw>
+<arg>mayur</arg>
+<arg>baviskar</arg>
+<status status="PASS" start="2024-04-22T11:56:41.029003" elapsed="8.194839"/>
+</kw>
+<kw name="LoginTest">
+<kw name="Open MyBrowser" owner="loginkeyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:56:49.229041" level="INFO">Opening browser 'chrome' to base url 'https://practice.expandtesting.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-22T11:56:49.225760" elapsed="7.439771"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-22T11:56:56.665815" elapsed="0.103472"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:56:49.225125" elapsed="7.544330"/>
+</kw>
+<kw name="Enter username" owner="loginkeyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:56:56.770459" level="INFO">Typing text '22kar' into text field '//input[@id='username']'.</msg>
+<arg>//input[@id='username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:56:56.770154" elapsed="0.140635"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-04-22T11:56:56.769687" elapsed="0.141227"/>
+</kw>
+<kw name="Enter Password" owner="loginkeyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:56:56.912198" level="INFO">Typing text '1234' into text field '//input[@id='password']'.</msg>
+<arg>//input[@id='password']</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:56:56.911783" elapsed="0.088792"/>
+</kw>
+<arg>${passed}</arg>
+<status status="PASS" start="2024-04-22T11:56:56.911152" elapsed="0.089657"/>
+</kw>
+<kw name="Click login" owner="loginkeyword">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:56:57.001756" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:56:57.001502" elapsed="1.207448"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:56:57.001123" elapsed="1.208105"/>
+</kw>
+<arg>22kar</arg>
+<arg>1234</arg>
+<status status="PASS" start="2024-04-22T11:56:49.224389" elapsed="8.985012"/>
+</kw>
+<doc>Test case to check login action</doc>
+<tag>Test_001</tag>
+<status status="PASS" start="2024-04-22T11:55:39.676300" elapsed="78.533702"/>
+</test>
+<status status="PASS" start="2024-04-22T11:55:39.087578" elapsed="79.124286"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Test_001</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Loginpage">Loginpage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

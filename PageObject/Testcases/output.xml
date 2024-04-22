@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on linux)" generated="2024-04-22T19:02:03.246659" rpa="false" schemaversion="5">
+<suite id="s1" name="loginTest" source="/home/mayurbaviskar/Study/RobotFramework_usingPython/PageObject/Testcases/loginTest.robot">
+<test id="s1-t1" name="Test case login check" line="16">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-04-22T19:02:03.379933" elapsed="0.000242"/>
+</kw>
+<kw name="open mybrowser" owner="Loginpage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-22T19:02:03.381149" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-22T19:02:03.380936" elapsed="16.817306"/>
+</kw>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<status status="PASS" start="2024-04-22T19:02:03.380427" elapsed="16.818002"/>
+</kw>
+<kw name="Enter username" owner="Loginpage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T19:02:20.199506" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
+<arg>${txt_Loginusername}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T19:02:20.199144" elapsed="0.845447"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-04-22T19:02:20.198768" elapsed="0.845977"/>
+</kw>
+<kw name="Enter password" owner="Loginpage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T19:02:21.045736" level="INFO">Typing text 'admin123' into text field 'xpath://input[@name='password']'.</msg>
+<arg>${txt_Loginpassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T19:02:21.045449" elapsed="0.276033"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-04-22T19:02:21.045024" elapsed="0.276687"/>
+</kw>
+<kw name="Click Login button" owner="Loginpage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T19:02:21.323112" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T19:02:21.322722" elapsed="1.530223"/>
+</kw>
+<status status="PASS" start="2024-04-22T19:02:21.322155" elapsed="1.530938"/>
+</kw>
+<tag>Sanity</tag>
+<status status="PASS" start="2024-04-22T19:02:03.379065" elapsed="19.474249"/>
+</test>
+<status status="PASS" start="2024-04-22T19:02:03.247575" elapsed="19.606243"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Sanity</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="loginTest">loginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

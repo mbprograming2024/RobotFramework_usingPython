@@ -1,64 +1,362 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.4 on linux)" generated="2024-04-22T16:33:38.505777" rpa="false" schemaversion="5">
-<suite id="s1" name="Datadriven" source="/home/mayurbaviskar/Study/RobotFramework_usingPython/Datadriven.robot">
-<test id="s1-t1" name="Login with user practice and password SuperSecretPassword!" line="6">
-<kw name="Login With User And Password">
-<kw name="Log Many" owner="BuiltIn">
-<msg time="2024-04-22T16:33:38.966372" level="INFO">practice</msg>
-<msg time="2024-04-22T16:33:38.966438" level="INFO">SuperSecretPassword!</msg>
-<arg>${Username}</arg>
-<arg>${Password}</arg>
-<doc>Logs the given messages as separate entries using the INFO level.</doc>
-<status status="PASS" start="2024-04-22T16:33:38.966243" elapsed="0.000239"/>
+<robot generator="Robot 7.0 (Python 3.11.4 on linux)" generated="2024-04-28T21:59:22.704741" rpa="false" schemaversion="5">
+<suite id="s1" name="Test1" source="/home/mayurbaviskar/Study/RobotFramework_usingPython/test1.robot">
+<test id="s1-t1" name="Test case 1" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-28T21:59:22.846434" level="INFO">Opening browser 'chrome' to base url 'https://www.globalsqa.com/cheatsheets/'.</msg>
+<arg>https://www.globalsqa.com/cheatsheets/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-28T21:59:22.846224" elapsed="10.970559"/>
 </kw>
-<arg>Username=practice</arg>
-<arg>Password=SuperSecretPassword!</arg>
-<status status="PASS" start="2024-04-22T16:33:38.965758" elapsed="0.000827"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-28T21:59:33.818100" elapsed="0.157343"/>
 </kw>
-<status status="PASS" start="2024-04-22T16:33:38.964471" elapsed="0.002263"/>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>5seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-28T21:59:33.976000" elapsed="0.000523"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-28T21:59:33.977695" level="INFO">Simulating Mouse Over on element '//a[@class='no_border'][contains(text(),'Tester’s Hub')]'.</msg>
+<arg>//a[@class='no_border'][contains(text(),'Tester’s Hub')]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-28T21:59:33.976941" elapsed="10.403495"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-28T21:59:44.382584" level="INFO">Simulating Mouse Over on element '//span[normalize-space()='Demo Testing Site']'.</msg>
+<arg>//span[normalize-space()='Demo Testing Site']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-28T21:59:44.381730" elapsed="10.353225"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<arg>//span[normalize-space()='Demo Testing Site']</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-04-28T21:59:54.735945" elapsed="5.035293"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-04-28T22:00:04.826958" level="INFO">@{hovered_elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="a9fa09eec728e6611e1e4f46bb311a19", element="f.5E36372C1ADBA803DE648079BBF654C1.d.5472B92FE31085A4A08AAFC976F032CD.e.69")&gt; | &lt;selenium.webdr...</msg>
+<var>@{hovered_elements}</var>
+<arg>xpath=//*[@id="menu-item-2822"]/div/ul/li[1]/div/ul/li</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-04-28T21:59:59.772065" elapsed="5.055079"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${hovered_element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-28T22:00:04.829275" elapsed="5.050091"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${hovered_element.text}' == 'DropDown Menu'</arg>
+<arg>Click Element</arg>
+<arg>${hovered_element}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-28T22:00:09.880277" elapsed="5.051578"/>
+</kw>
+<var name="${hovered_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a9fa09eec728e6611e1e4f46bb311a19", element="f.5E36372C1ADBA803DE648079BBF654C1.d.5472B92FE31085A4A08AAFC976F032CD.e.69")&gt;</var>
+<status status="PASS" start="2024-04-28T22:00:04.828663" elapsed="10.103710"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${hovered_element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-28T22:00:14.935853" elapsed="5.043576"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${hovered_element.text}' == 'DropDown Menu'</arg>
+<arg>Click Element</arg>
+<arg>${hovered_element}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-28T22:00:19.980076" elapsed="5.038931"/>
+</kw>
+<var name="${hovered_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a9fa09eec728e6611e1e4f46bb311a19", element="f.5E36372C1ADBA803DE648079BBF654C1.d.5472B92FE31085A4A08AAFC976F032CD.e.70")&gt;</var>
+<status status="PASS" start="2024-04-28T22:00:14.935042" elapsed="10.084268"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${hovered_element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-28T22:00:25.020311" elapsed="5.037909"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${hovered_element.text}' == 'DropDown Menu'</arg>
+<arg>Click Element</arg>
+<arg>${hovered_element}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-28T22:00:30.059039" elapsed="5.038046"/>
+</kw>
+<var name="${hovered_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a9fa09eec728e6611e1e4f46bb311a19", element="f.5E36372C1ADBA803DE648079BBF654C1.d.5472B92FE31085A4A08AAFC976F032CD.e.71")&gt;</var>
+<status status="PASS" start="2024-04-28T22:00:25.019880" elapsed="10.077547"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${hovered_element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-28T22:00:35.098568" elapsed="5.039929"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${hovered_element.text}' == 'DropDown Menu'</arg>
+<arg>Click Element</arg>
+<arg>${hovered_element}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-28T22:00:40.139162" elapsed="5.047090"/>
+</kw>
+<var name="${hovered_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a9fa09eec728e6611e1e4f46bb311a19", element="f.5E36372C1ADBA803DE648079BBF654C1.d.5472B92FE31085A4A08AAFC976F032CD.e.72")&gt;</var>
+<status status="PASS" start="2024-04-28T22:00:35.098018" elapsed="10.088545"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${hovered_element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-28T22:00:45.187539" elapsed="5.038525"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${hovered_element.text}' == 'DropDown Menu'</arg>
+<arg>Click Element</arg>
+<arg>${hovered_element}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-28T22:00:50.226761" elapsed="5.041882"/>
+</kw>
+<var name="${hovered_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a9fa09eec728e6611e1e4f46bb311a19", element="f.5E36372C1ADBA803DE648079BBF654C1.d.5472B92FE31085A4A08AAFC976F032CD.e.73")&gt;</var>
+<status status="PASS" start="2024-04-28T22:00:45.187125" elapsed="10.081813"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${hovered_element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-28T22:00:55.269938" elapsed="5.035518"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${hovered_element.text}' == 'DropDown Menu'</arg>
+<arg>Click Element</arg>
+<arg>${hovered_element}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-28T22:01:00.306246" elapsed="5.043379"/>
+</kw>
+<var name="${hovered_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a9fa09eec728e6611e1e4f46bb311a19", element="f.5E36372C1ADBA803DE648079BBF654C1.d.5472B92FE31085A4A08AAFC976F032CD.e.74")&gt;</var>
+<status status="PASS" start="2024-04-28T22:00:55.269515" elapsed="10.080404"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${hovered_element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-28T22:01:05.350850" elapsed="5.034623"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${hovered_element.text}' == 'DropDown Menu'</arg>
+<arg>Click Element</arg>
+<arg>${hovered_element}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-28T22:01:10.386422" elapsed="5.047617"/>
+</kw>
+<var name="${hovered_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a9fa09eec728e6611e1e4f46bb311a19", element="f.5E36372C1ADBA803DE648079BBF654C1.d.5472B92FE31085A4A08AAFC976F032CD.e.75")&gt;</var>
+<status status="PASS" start="2024-04-28T22:01:05.350438" elapsed="10.084083"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${hovered_element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-28T22:01:15.435922" elapsed="5.051223"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-28T22:01:25.507278" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a9fa09eec728e6611e1e4f46bb311a19", element="f.5E36372C1ADBA803DE648079BBF654C1.d.5472B92FE31085A4A08AAFC976F032CD.e.76")&gt;'.</msg>
+<arg>${hovered_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T22:01:25.506398" elapsed="7.813376"/>
+</kw>
+<arg>'${hovered_element.text}' == 'DropDown Menu'</arg>
+<arg>Click Element</arg>
+<arg>${hovered_element}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-28T22:01:20.487491" elapsed="12.832669"/>
+</kw>
+<var name="${hovered_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a9fa09eec728e6611e1e4f46bb311a19", element="f.5E36372C1ADBA803DE648079BBF654C1.d.5472B92FE31085A4A08AAFC976F032CD.e.76")&gt;</var>
+<status status="PASS" start="2024-04-28T22:01:15.435180" elapsed="17.885172"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<msg time="2024-04-28T22:01:33.355827" level="FAIL">Resolving variable '${hovered_element.text}' failed: StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=123.0.6312.122); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55fb6c01e863 &lt;unknown&gt;
+#1 0x55fb6bd148c6 &lt;unknown&gt;
+#2 0x55fb6bd24921 &lt;unknown&gt;
+#3 0x55fb6bd2520a &lt;unknown&gt;
+#4 0x55fb6bd1a801 &lt;unknown&gt;
+#5 0x55fb6bd18bd1 &lt;unknown&gt;
+#6 0x55fb6bd1bbce &lt;unknown&gt;
+#7 0x55fb6bd1bc5c &lt;unknown&gt;
+#8 0x55fb6bd59ae2 &lt;unknown&gt;
+#9 0x55fb6bd815a2 &lt;unknown&gt;
+#10 0x55fb6bd53e98 &lt;unknown&gt;
+#11 0x55fb6bd8176e &lt;unknown&gt;
+#12 0x55fb6bd9fc19 &lt;unknown&gt;
+#13 0x55fb6bd81343 &lt;unknown&gt;
+#14 0x55fb6bd52593 &lt;unknown&gt;
+#15 0x55fb6bd52f5e &lt;unknown&gt;
+#16 0x55fb6bfe284b &lt;unknown&gt;
+#17 0x55fb6bfe67a5 &lt;unknown&gt;
+#18 0x55fb6bfd0571 &lt;unknown&gt;
+#19 0x55fb6bfe7332 &lt;unknown&gt;
+#20 0x55fb6bfb587f &lt;unknown&gt;
+#21 0x55fb6c00d728 &lt;unknown&gt;
+#22 0x55fb6c00d8fb &lt;unknown&gt;
+#23 0x55fb6c01d9b4 &lt;unknown&gt;
+#24 0x7f032fa8f6ba &lt;unknown&gt;
+</msg>
+<arg>${hovered_element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="FAIL" start="2024-04-28T22:01:33.321325" elapsed="0.034895">Resolving variable '${hovered_element.text}' failed: StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=123.0.6312.122); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55fb6c01e863 &lt;unknown&gt;
+#1 0x55fb6bd148c6 &lt;unknown&gt;
+#2 0x55fb6bd24921 &lt;unknown&gt;
+#3 0x55fb6bd2520a &lt;unknown&gt;
+#4 0x55fb6bd1a801 &lt;unknown&gt;
+#5 0x55fb6bd18bd1 &lt;unknown&gt;
+#6 0x55fb6bd1bbce &lt;unknown&gt;
+#7 0x55fb6bd1bc5c &lt;unknown&gt;
+#8 0x55fb6bd59ae2 &lt;unknown&gt;
+#9 0x55fb6bd815a2 &lt;unknown&gt;
+#10 0x55fb6bd53e98 &lt;unknown&gt;
+#11 0x55fb6bd8176e &lt;unknown&gt;
+#12 0x55fb6bd9fc19 &lt;unknown&gt;
+#13 0x55fb6bd81343 &lt;unknown&gt;
+#14 0x55fb6bd52593 &lt;unknown&gt;
+#15 0x55fb6bd52f5e &lt;unknown&gt;
+#16 0x55fb6bfe284b &lt;unknown&gt;
+#17 0x55fb6bfe67a5 &lt;unknown&gt;
+#18 0x55fb6bfd0571 &lt;unknown&gt;
+#19 0x55fb6bfe7332 &lt;unknown&gt;
+#20 0x55fb6bfb587f &lt;unknown&gt;
+#21 0x55fb6c00d728 &lt;unknown&gt;
+#22 0x55fb6c00d8fb &lt;unknown&gt;
+#23 0x55fb6c01d9b4 &lt;unknown&gt;
+#24 0x7f032fa8f6ba &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${hovered_element.text}' == 'DropDown Menu'</arg>
+<arg>Click Element</arg>
+<arg>${hovered_element}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2024-04-28T22:01:33.357171" elapsed="0.000206"/>
+</kw>
+<var name="${hovered_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a9fa09eec728e6611e1e4f46bb311a19", element="f.5E36372C1ADBA803DE648079BBF654C1.d.5472B92FE31085A4A08AAFC976F032CD.e.77")&gt;</var>
+<status status="FAIL" start="2024-04-28T22:01:33.320878" elapsed="0.036846">Resolving variable '${hovered_element.text}' failed: StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=123.0.6312.122); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55fb6c01e863 &lt;unknown&gt;
+#1 0x55fb6bd148c6 &lt;unknown&gt;
+#2 0x55fb6bd24921 &lt;unknown&gt;
+#3 0x55fb6bd2520a &lt;unknown&gt;
+#4 0x55fb6bd1a801 &lt;unknown&gt;
+#5 0x55fb6bd18bd1 &lt;unknown&gt;
+#6 0x55fb6bd1bbce &lt;unknown&gt;
+#7 0x55fb6bd1bc5c &lt;unknown&gt;
+#8 0x55fb6bd59ae2 &lt;unknown&gt;
+#9 0x55fb6bd815a2 &lt;unknown&gt;
+#10 0x55fb6bd53e98 &lt;unknown&gt;
+#11 0x55fb6bd8176e &lt;unknown&gt;
+#12 0x55fb6bd9fc19 &lt;unknown&gt;
+#13 0x55fb6bd81343 &lt;unknown&gt;
+#14 0x55fb6bd52593 &lt;unknown&gt;
+#15 0x55fb6bd52f5e &lt;unknown&gt;
+#16 0x55fb6bfe284b &lt;unknown&gt;
+#17 0x55fb6bfe67a5 &lt;unknown&gt;
+#18 0x55fb6bfd0571 &lt;unknown&gt;
+#19 0x55fb6bfe7332 &lt;unknown&gt;
+#20 0x55fb6bfb587f &lt;unknown&gt;
+#21 0x55fb6c00d728 &lt;unknown&gt;
+#22 0x55fb6c00d8fb &lt;unknown&gt;
+#23 0x55fb6c01d9b4 &lt;unknown&gt;
+#24 0x7f032fa8f6ba &lt;unknown&gt;
+</status>
+</iter>
+<var>${hovered_element}</var>
+<value>@{hovered_elements}</value>
+<status status="FAIL" start="2024-04-28T22:00:04.827760" elapsed="88.530364">Resolving variable '${hovered_element.text}' failed: StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=123.0.6312.122); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55fb6c01e863 &lt;unknown&gt;
+#1 0x55fb6bd148c6 &lt;unknown&gt;
+#2 0x55fb6bd24921 &lt;unknown&gt;
+#3 0x55fb6bd2520a &lt;unknown&gt;
+#4 0x55fb6bd1a801 &lt;unknown&gt;
+#5 0x55fb6bd18bd1 &lt;unknown&gt;
+#6 0x55fb6bd1bbce &lt;unknown&gt;
+#7 0x55fb6bd1bc5c &lt;unknown&gt;
+#8 0x55fb6bd59ae2 &lt;unknown&gt;
+#9 0x55fb6bd815a2 &lt;unknown&gt;
+#10 0x55fb6bd53e98 &lt;unknown&gt;
+#11 0x55fb6bd8176e &lt;unknown&gt;
+#12 0x55fb6bd9fc19 &lt;unknown&gt;
+#13 0x55fb6bd81343 &lt;unknown&gt;
+#14 0x55fb6bd52593 &lt;unknown&gt;
+#15 0x55fb6bd52f5e &lt;unknown&gt;
+#16 0x55fb6bfe284b &lt;unknown&gt;
+#17 0x55fb6bfe67a5 &lt;unknown&gt;
+#18 0x55fb6bfd0571 &lt;unknown&gt;
+#19 0x55fb6bfe7332 &lt;unknown&gt;
+#20 0x55fb6bfb587f &lt;unknown&gt;
+#21 0x55fb6c00d728 &lt;unknown&gt;
+#22 0x55fb6c00d8fb &lt;unknown&gt;
+#23 0x55fb6c01d9b4 &lt;unknown&gt;
+#24 0x7f032fa8f6ba &lt;unknown&gt;
+</status>
+</for>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-04-28T22:01:33.358908" elapsed="0.000140"/>
+</kw>
+<doc>Basic test case in robot framework</doc>
+<tag>Tese case name for markers</tag>
+<status status="FAIL" start="2024-04-28T21:59:22.845356" elapsed="130.514741">Resolving variable '${hovered_element.text}' failed: StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=123.0.6312.122); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+#0 0x55fb6c01e863 &lt;unknown&gt;
+#1 0x55fb6bd148c6 &lt;unknown&gt;
+#2 0x55fb6bd24921 &lt;unknown&gt;
+#3 0x55fb6bd2520a &lt;unknown&gt;
+#4 0x55fb6bd1a801 &lt;unknown&gt;
+#5 0x55fb6bd18bd1 &lt;unknown&gt;
+#6 0x55fb6bd1bbce &lt;unknown&gt;
+#7 0x55fb6bd1bc5c &lt;unknown&gt;
+#8 0x55fb6bd59ae2 &lt;unknown&gt;
+#9 0x55fb6bd815a2 &lt;unknown&gt;
+#10 0x55fb6bd53e98 &lt;unknown&gt;
+#11 0x55fb6bd8176e &lt;unknown&gt;
+#12 0x55fb6bd9fc19 &lt;unknown&gt;
+#13 0x55fb6bd81343 &lt;unknown&gt;
+#14 0x55fb6bd52593 &lt;unknown&gt;
+#15 0x55fb6bd52f5e &lt;unknown&gt;
+#16 0x55fb6bfe284b &lt;unknown&gt;
+#17 0x55fb6bfe67a5 &lt;unknown&gt;
+#18 0x55fb6bfd0571 &lt;unknown&gt;
+#19 0x55fb6bfe7332 &lt;unknown&gt;
+#20 0x55fb6bfb587f &lt;unknown&gt;
+#21 0x55fb6c00d728 &lt;unknown&gt;
+#22 0x55fb6c00d8fb &lt;unknown&gt;
+#23 0x55fb6c01d9b4 &lt;unknown&gt;
+#24 0x7f032fa8f6ba &lt;unknown&gt;
+</status>
 </test>
-<test id="s1-t2" name="Login with user mayur and password 12345" line="6">
-<kw name="Login With User And Password">
-<kw name="Log Many" owner="BuiltIn">
-<msg time="2024-04-22T16:33:38.968908" level="INFO">mayur</msg>
-<msg time="2024-04-22T16:33:38.969001" level="INFO">12345</msg>
-<arg>${Username}</arg>
-<arg>${Password}</arg>
-<doc>Logs the given messages as separate entries using the INFO level.</doc>
-<status status="PASS" start="2024-04-22T16:33:38.968760" elapsed="0.000296"/>
-</kw>
-<arg>Username=mayur</arg>
-<arg>Password=12345</arg>
-<status status="PASS" start="2024-04-22T16:33:38.968368" elapsed="0.000782"/>
-</kw>
-<status status="PASS" start="2024-04-22T16:33:38.966949" elapsed="0.002374"/>
-</test>
-<test id="s1-t3" name="Login with user 22kar and password 58976" line="6">
-<kw name="Login With User And Password">
-<kw name="Log Many" owner="BuiltIn">
-<msg time="2024-04-22T16:33:38.971476" level="INFO">22kar</msg>
-<msg time="2024-04-22T16:33:38.971569" level="INFO">58976</msg>
-<arg>${Username}</arg>
-<arg>${Password}</arg>
-<doc>Logs the given messages as separate entries using the INFO level.</doc>
-<status status="PASS" start="2024-04-22T16:33:38.971280" elapsed="0.000354"/>
-</kw>
-<arg>Username=22kar</arg>
-<arg>Password=58976</arg>
-<status status="PASS" start="2024-04-22T16:33:38.970819" elapsed="0.000915"/>
-</kw>
-<status status="PASS" start="2024-04-22T16:33:38.969546" elapsed="0.002386"/>
-</test>
-<status status="PASS" start="2024-04-22T16:33:38.506688" elapsed="0.465771"/>
+<status status="FAIL" start="2024-04-28T21:59:22.705646" elapsed="130.656788"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1" skip="0">Tese case name for markers</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Datadriven">Datadriven</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test1">Test1</stat>
 </suite>
 </statistics>
 <errors>

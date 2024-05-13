@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on linux)" generated="2024-05-14T00:47:51.590057" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="/home/mayurbaviskar/Study/RobotFramework_usingPython/amezon/login.robot">
+<test id="s1-t1" name="Check amezon base url" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-14T00:47:51.708626" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.in/'.</msg>
+<arg>${baseurl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-14T00:47:51.708383" elapsed="7.312586"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-05-14T00:47:59.250113" level="INFO">${pagetitle} = Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</msg>
+<var>${pagetitle}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-05-14T00:47:59.021534" elapsed="0.228669"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${pagetitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-14T00:47:59.250635" elapsed="0.000453"/>
+</kw>
+<status status="PASS" start="2024-05-14T00:47:51.707520" elapsed="7.543894"/>
+</test>
+<test id="s1-t2" name="Test Login function of amezon Webpage" line="20">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-14T00:47:59.252921" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.in/'.</msg>
+<arg>${baseurl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-14T00:47:59.252504" elapsed="8.129153"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-14T00:48:07.382438" level="INFO">Clicking element 'xpath=//*[@id="nav-link-accountList"]'.</msg>
+<arg>${Account_&amp;_list}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-14T00:48:07.381956" elapsed="1.008154"/>
+</kw>
+<kw name="Enter username" owner="Locator_login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-14T00:48:08.392868" level="INFO">Typing text '7020611623' into text field 'xpath=//input[@id='ap_email']'.</msg>
+<arg>${input_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-14T00:48:08.392272" elapsed="0.118620"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-05-14T00:48:08.391207" elapsed="0.119846"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-14T00:48:08.511608" level="INFO">Clicking element 'xpath=//*[@id="continue"]'.</msg>
+<arg>${continue_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-14T00:48:08.511309" elapsed="0.616672"/>
+</kw>
+<kw name="Enter_password" owner="Locator_login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-14T00:48:09.129128" level="INFO">Typing text 'Mayur@1996' into text field 'xpath=//*[@id="ap_password"]'.</msg>
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-14T00:48:09.128838" elapsed="0.093757"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-05-14T00:48:09.128362" elapsed="0.094356"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-14T00:48:09.223350" level="INFO">Clicking element 'xpath=//*[@id="signInSubmit"]'.</msg>
+<arg>${signin_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-14T00:48:09.222955" elapsed="0.087963"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-05-14T00:48:11.018663" level="INFO">${pagetitle} = Amazon</msg>
+<var>${pagetitle}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-05-14T00:48:09.311210" elapsed="1.707494"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${pagetitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-14T00:48:11.018905" elapsed="0.000218"/>
+</kw>
+<status status="PASS" start="2024-05-14T00:47:59.251826" elapsed="11.767461"/>
+</test>
+<status status="PASS" start="2024-05-14T00:47:51.590928" elapsed="19.428737"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
